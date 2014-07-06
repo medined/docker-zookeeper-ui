@@ -5,8 +5,8 @@ RUN apt-get install -y git maven
 RUN git clone https://github.com/DeemOpen/zkui.git
 RUN cd /zkui && mvn clean install
 
-ADD config.cfg.template /
-ADD start.sh /
+ADD files/config.cfg.template /
+ADD files/start.sh /
 
 WORKDIR /zkui/target
 
